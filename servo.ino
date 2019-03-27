@@ -91,7 +91,7 @@ void loop() {
         char checksum = (bytes[2] + bytes[3] + bytes[4])%256;
         if ( checksum == bytes[5] )
         {
-          thetaDesired = (bytes[3] * 256) + bytes[4];
+          thetaDesired = (bytes[3] * 256) + (unsigned char)bytes[4];
           if ( 1 == bytes[2] )
             thetaDesired *= -1;
           Serial.println(thetaDesired);
