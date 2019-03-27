@@ -1,5 +1,4 @@
 import serial
-import array
 ser = serial.Serial(port='/dev/ttyS0',baudrate=9600)
 print("Connected to: " + ser.portstr)
 while True:
